@@ -15,6 +15,7 @@ public class Main {
     amd.addGpuModel(2023,"7900XT");
     amd.addGpuModel(2012,"HD7970");
     amd.getGpuModels();
+    amd.getGpuModel(2023);
     amd.removeGpuModel(2023);
 
     Processor qualcomm = new Processor();

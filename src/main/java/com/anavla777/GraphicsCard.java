@@ -15,10 +15,16 @@ public class GraphicsCard {
         System.out.println("Removed gpu model: " + model);
         System.out.println("Available GPU models: " + gpuModels);
     }
-    public String getGpuModel(int model) {
-        return gpuModels.get(model);
+    public void getGpuModel(int model) {
+        for (Map.Entry<Integer, String> entry : gpuModels.entrySet()) {
+            if (entry.getKey() == model) {
+                System.out.println("Retrieving gpu model: "+ entry.getValue());
+            }
+        }
     }
     public void getGpuModels() {
-        System.out.println(gpuModels);
+        for (Map.Entry<Integer, String> entry : gpuModels.entrySet()) {
+            System.out.println("Retrieving gpu model: " + entry.getKey() + " " + entry.getValue());
+        }
     }
 }

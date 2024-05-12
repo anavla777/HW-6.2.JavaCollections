@@ -11,16 +11,24 @@ public class Processor {
         model.add(CPU);
    }
    public void findCPUModel (String CPU) {
-        if (model.contains(CPU)) {
-            System.out.println(CPU);
+        for (String model : model) {
+            if (model.equals(CPU)) {
+                System.out.println(model);
+            }
         }
    }
    public void printModels() {
-        System.out.println(model);
+        for (String model : model) {
+            System.out.println(model);
+        }
    }
    public void removeCPUModel(String cpu) {
-        model.remove(cpu);
-        System.out.println("CPU removed: " + cpu);
-        System.out.println("Available CPUs: "+ model);
+        for (String item : model) {
+            if (item.equals(cpu)) {
+                model.remove(cpu);
+                System.out.println("CPU removed: " + cpu);
+                System.out.println("Available CPUs: "+ model);
+            }
+        }
    }
 }

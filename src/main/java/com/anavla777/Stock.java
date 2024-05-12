@@ -13,9 +13,13 @@ public class Stock {
         option.add(value);
     }
     public void removeOption(String value) {
-        option.remove(value);
-        System.out.println("Option removed: " + value);
-        System.out.println("Available options: "+ option);
+        for (String item : option) {
+            if (item.equals(value)) {
+                option.remove(item);
+                System.out.println("Option removed: " + value);
+                System.out.println("Available options: "+ option);
+            }
+        }
     }
     public void getFirstOption() {
         System.out.println(option.peek());
